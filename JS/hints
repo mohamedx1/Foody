@@ -1,0 +1,17 @@
+"Please enter your name using only letters (A-Z, a-z) and spaces. Special characters and numbers are not allowed."
+
+// if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/.test(emailInput)) {
+            //     isValed("emailAlert")
+            //     if (/^\d{10}$/.test(phoneNuper)) {
+            //         isValed("phoneAlert")
+            //         if (/^\d+$/.test(userAge)) {
+            //             isValed("ageAlert")
+            //         } else {
+            //             inValed("ageAlert" , "Please enter a valid age using only numbers (0-9). The age should be a whole number without any additional characters.")
+            //         }
+            //     } else {
+            //         inValed("phoneAlert","Please enter a 10-digit phone number using only numbers (0-9). Ensure there are no spaces or special characters.")
+            //     }
+            // } else {
+            //     inValed("emailAlert","* Please enter a valid email address in the format example@example.com.")
+            // }
