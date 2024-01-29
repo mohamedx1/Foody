@@ -206,7 +206,7 @@ async function displayArea () {
 }
 
 
-async function displayfilterArea (mainArr) {
+function displayfilterArea (mainArr) {
     let container = "";
     let meals = mainArr.meals;
     for (let i = 0; i <= 19; i++) {
@@ -284,7 +284,7 @@ document.getElementById("ingredientsLink").addEventListener("click", function ()
     displayThemealdb()
 })
 
-async function displayfilterIngerd (mainArr) {
+function displayfilterIngerd (mainArr) {
     let container = "";
     let meals = mainArr.meals;
     for (let i = 0; i <= 19; i++) {
@@ -375,7 +375,6 @@ async function displayContact () {
         const userAge = document.getElementById("ageInput")
         const password = document.getElementById("passwordInput")
         const rePassword = document.getElementById("repasswordInput")
-
         if (/^[a-zA-Z0-9]{3,16}$/.test(userNameInput.value)) {
             isValed("nameAlert");
             if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/.test(emailInput.value)) {
@@ -424,5 +423,10 @@ async function displayContact () {
 //---------------------------------------- End Contact Us Data ----------------------------------------
 
 
-
-
+async function getIdData (id) {
+    let idApi = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+    let idapiData = await fetch(idApi);
+    let idfinalData = await idapiData.json();
+    console.log(idfinalData.meals)
+    return idfinalData;
+}
